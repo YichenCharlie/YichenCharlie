@@ -1,20 +1,16 @@
-name: Refresh pixel desk
-
+name: Refresh language stats
 on:
   push:
     branches: [main]
-    paths: [now.yml, scripts/**]
+    paths: ['scripts/build_stats.py', '.github/workflows/desk.yml']
   schedule:
-    - cron: '7 * * * *'   # hourly, so the window follows day/night in Houston
+    - cron: '17 1 * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
-  group: desk
-  cancel-in-progress: true
-
+  group: profile-stats
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,18 +19,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build SVGs
-        run: |
-          python scripts/build_desk.py
-          python scripts/build_pigeons.py
+      - name: Update language statistics
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/build_stats.py
       - name: Commit if changed
         run: |
-          if git diff --quiet -- desk.svg pigeons.svg; then
-            echo "No visual change."
+          if git diff --quiet -- README.md; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add desk.svg pigeons.svg
-          git commit -m "Refresh pixel desk"
+          git add README.md
+          git commit -m "Refresh language stats"
+          git pull --rebase origin main
           git push
