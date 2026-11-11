@@ -47,14 +47,14 @@ Learning language modeling basics independently by following Stanford CS336, usi
 ```text
 Languages across my public code
 
-Jupyter Notebook     █████████████────────────    50.54 %
-Python               ██████████───────────────    41.17 %
-JavaScript           █────────────────────────     2.43 %
-HTML                 █────────────────────────     2.18 %
-CSS                  ─────────────────────────     1.73 %
+Jupyter Notebook     ████████████─────────────    49.43 %
+Python               ██████████───────────────    40.60 %
+JavaScript           █────────────────────────     2.89 %
+HTML                 █────────────────────────     2.66 %
+CSS                  █────────────────────────     2.52 %
 ```
 
-<sub>Top 5 languages; percentages use all language bytes. Excludes forks and this profile. Notebook files are counted separately; includes starter code. Updated 2026-11-10 UTC.</sub>
+<sub>Top 5 languages; percentages use all language bytes. Excludes forks and this profile. Notebook files are counted separately; includes starter code. Updated 2026-11-11 UTC.</sub>
 <!-- STATS:END -->
 
 <hr>
