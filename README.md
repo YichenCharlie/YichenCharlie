@@ -54,7 +54,7 @@ HTML                 █──────────────────�
 CSS                  █────────────────────────     2.52 %
 ```
 
-<sub>Top 5 languages; percentages use all language bytes. Excludes forks and this profile. Notebook files are counted separately; includes starter code. Updated 2026-11-12 UTC.</sub>
+<sub>Top 5 languages; percentages use all language bytes. Excludes forks and this profile. Notebook files are counted separately; includes starter code. Updated 2026-11-13 UTC.</sub>
 <!-- STATS:END -->
 
 <hr>
